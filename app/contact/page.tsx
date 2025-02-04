@@ -13,15 +13,15 @@ export default function Contact() {
           </p>
           <div className="space-y-4">
             <div className="flex items-center">
-              <Phone className="w-6 h-6 text-blue-600 mr-2" />
+              <Phone className="w-6 h-6 text-red-950 mr-2" />
               <span>(555) 123-4567</span>
             </div>
             <div className="flex items-center">
-              <Mail className="w-6 h-6 text-blue-600 mr-2" />
+              <Mail className="w-6 h-6 text-red-950 mr-2" />
               <span>info@valvetech.com</span>
             </div>
             <div className="flex items-center">
-              <MapPin className="w-6 h-6 text-blue-600 mr-2" />
+              <MapPin className="w-6 h-6 text-red-950 mr-2" />
               <span>123 Valve Street, Industrial City, IN 12345, USA</span>
             </div>
           </div>

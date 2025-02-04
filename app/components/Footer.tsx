@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 export default function Footer() {
@@ -6,7 +7,13 @@ export default function Footer() {
       <div className="container mx-auto px-6 py-8">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
-            <h3 className="text-lg font-semibold mb-2">ValveTech Industries</h3>
+            <Image 
+              src="/AM+logo_white.png"
+              alt="A&M Logo"
+              width={100}
+              height={100}
+            />
+            <h3 className="text-lg font-semibold mb-2">A&M Equipment</h3>
             <p className="text-sm">Leading manufacturer of high-quality valves for various industries.</p>
           </div>
           <div className="w-full md:w-1/4 mb-6 md:mb-0">

@@ -54,7 +54,7 @@ export default function Products() {
             <div className="p-6">
               <h2 className="text-2xl font-semibold mb-2">{product.name}</h2>
               <p className="text-gray-600 mb-4">{product.description}</p>
-              <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+              <button className="bg-red-950 text-white py-2 px-4 rounded hover:bg-white hover:text-black hover:drop-shadow-xl  transition duration-300">
                 Request Quote
               </button>
             </div>
