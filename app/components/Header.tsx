@@ -10,13 +10,27 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-md">
-      <nav className="container mx-auto px-6 py-3">
+      <nav className="container mx-auto px-2 py-3">
         <div className="flex justify-between items-center">
-          <div className="flex items-center justify-between w-1/4">
-            <Image src="/maroon-logo.png" width={100} height={100} alt="A&M Logo" />
-            <Link href="/" className=" text-xl font-bold text-gray-800">
-              A&M Equipment 
-            </Link>
+            <div className="flex items-center justify-evenly w-1/2">
+              <Link href="/">
+                <Image src="/maroon-logo.png" width={100} height={100} alt="A&M Logo" />
+              </Link>
+              <Link href="/" className=" text-xl font-bold text-gray-800">
+                A&M Equipment 
+              </Link>
+              |
+              <Link href="https://newtonvas.com/" target="_blank">
+                <Image src="/newton_icon.webp" width={100} height={100} alt="A&M Logo" />
+              </Link>
+              |
+              <Link href="https://www.rotork.com/en" target="_blank">
+                <Image src="/rotork-logo.svg" width={100} height={100} alt="A&M Logo" />
+              </Link>
+              |
+              <Link href="https://www.valtex.com/" target="_blank">
+                <Image src="/valtex-logo.png" width={100} height={100} alt="A&M Logo" />
+              </Link>
             </div>
             {/* FIX THIS SHIT, NEED TO BE MOBILE RESPONSIVE */}
             {/* <div className="flex space-x-4">
@@ -39,8 +53,8 @@ export default function Header() {
             </div> */}
             <div className="hidden md:flex space-x-4">
               <NavLink href="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" />
-              <NavLink href="/about" icon={<Info className="w-5 h-5 mr-1" />} text="About" />
               <NavLink href="/products" icon={<Package className="w-5 h-5 mr-1" />} text="Products" />
+              <NavLink href="/about" icon={<Info className="w-5 h-5 mr-1" />} text="About" />
               <NavLink href="/contact" icon={<Phone className="w-5 h-5 mr-1" />} text="Contact" />
             </div>
             <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -50,8 +64,8 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden mt-4 space-y-2">
             <NavLink href="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" mobile />
-            <NavLink href="/about" icon={<Info className="w-5 h-5 mr-1" />} text="About" mobile />
             <NavLink href="/products" icon={<Package className="w-5 h-5 mr-1" />} text="Products" mobile />
+            <NavLink href="/about" icon={<Info className="w-5 h-5 mr-1" />} text="About" mobile />
             <NavLink href="/contact" icon={<Phone className="w-5 h-5 mr-1" />} text="Contact" mobile />
           </div>
         )}
