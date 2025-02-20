@@ -44,21 +44,19 @@ export default function Footer() {
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h4 className="text-lg font-semibold mb-2">Contact Us</h4>
             <p className="text-sm">
-              123 Valve Street
+              28246 FM 2920 Rd.
               <br />
-              Industrial City, IN 12345
+              Waller, TX 77484
               <br />
               USA
             </p>
             <p className="text-sm mt-2">
-              Phone: (555) 123-4567
-              <br />
-              Email: info@valvetech.com
+              Phone: 713-893-9371
             </p>
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-center">
-          <p>&copy; 2023 ValveTech Industries. All rights reserved.</p>
+          <p>&copy; 2025 A&M Equipment. All rights reserved.</p>
         </div>
       </div>
     </footer>
