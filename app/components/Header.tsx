@@ -10,26 +10,27 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-md">
-      <nav className="container mx-auto px-2 py-3">
+      <nav className="container mx-auto px-8 md:px-0 py-3">
         <div className="flex justify-between items-center">
-            <div className="flex items-center justify-evenly w-1/2">
-              <Link href="/">
-                <Image src="/maroon-logo.png" width={100} height={100} alt="A&M Logo" />
-              </Link>
-              <Link href="/" className=" text-xl font-bold text-gray-800">
+            <div className="flex items-center justify-start lg:justify-between w-1/2 md:w-1/2">
+              {/* maybe keep? */}
+              {/* <Link href="/" className="text-xl  font-bold text-gray-800">
                 A&M Equipment 
+              </Link> */}
+              <Link href="/" >
+                <Image src="/maroon-logo.png" width={125} height={125} alt="A&M Logo" />
               </Link>
-              |
-              <Link href="https://newtonvas.com/" target="_blank">
-                <Image src="/newton_icon.webp" width={100} height={100} alt="A&M Logo" />
+              <span className="hidden lg:flex">|</span>
+              <Link href="https://newtonvas.com/" target="_blank" className="hidden lg:flex">
+                <Image src="/newton_icon.webp" width={50} height={50} alt="A&M Logo" />
               </Link>
-              |
-              <Link href="https://www.rotork.com/en" target="_blank">
+              <span className="hidden lg:flex">|</span>
+              <Link href="https://www.rotork.com/en" target="_blank" className="hidden lg:flex">
                 <Image src="/rotork-logo.svg" width={100} height={100} alt="A&M Logo" />
               </Link>
-              |
-              <Link href="https://www.valtex.com/" target="_blank">
-                <Image src="/valtex-logo.png" width={100} height={100} alt="A&M Logo" />
+              <span className="hidden lg:flex">|</span>
+              <Link href="https://www.valtex.com/" target="_blank" className="hidden lg:flex">
+                <Image src="/valtex-logo.png" width={150} height={150} alt="A&M Logo" />
               </Link>
             </div>
             {/* FIX THIS SHIT, NEED TO BE MOBILE RESPONSIVE */}
