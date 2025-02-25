@@ -1,7 +1,7 @@
 import Image from "next/image"
 import LinkButton from "./components/LinkButton"
-import Carousel from "./components/Carousel"
-// import EmblaCarousel from "./components/EmblaCarousel"
+// import Carousel from "./components/Carousel"
+import ImageCarousel from "./components/ImageCarousel"
 import Link from "next/link"
 
 export default function Home() {
@@ -36,8 +36,10 @@ export default function Home() {
               />
             </div> */}
 
-            <Carousel />
-            {/* <EmblaCarousel slides={SLIDES} options={{loop: true}} /> */}
+            {/* <Carousel /> */}
+            <div className="md:w-1/2 mt-8 md:mt-0">
+              <ImageCarousel />
+            </div>
 
           </div>
         </div>
