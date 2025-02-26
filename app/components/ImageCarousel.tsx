@@ -224,7 +224,7 @@ export default function ImageCarousel({ page }: { page: keyof Pictures }) {
 
   return (
     <div className={`relative ${page === "about" ? "w-3/4" : "w-full"}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+      <div className="relative aspect-[2/3] md:aspect-[4/3] w-full overflow-hidden rounded-lg">
         <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {images.map((image, index) => (
             <div key={index} className="w-full flex-shrink-0 flex justify-center items-center">
@@ -234,6 +234,7 @@ export default function ImageCarousel({ page }: { page: keyof Pictures }) {
                 width={600}
                 height={400}
                 className={`${imageDimensions[index] && isLandscape(imageDimensions[index].width, imageDimensions[index].height) ? 'w-full h-full object-cover' : ''}`}
+                // className="object-contain"
               />
             </div>
           ))}
