@@ -1,7 +1,6 @@
 import Image from "next/image"
 import LinkButton from "./components/LinkButton"
-import Carousel from "./components/Carousel"
-// import EmblaCarousel from "./components/EmblaCarousel"
+import ImageCarousel from "./components/ImageCarousel"
 import Link from "next/link"
 
 export default function Home() {
@@ -10,10 +9,10 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-red-950 text-white py-20">
+      <section className="bg-red-950 text-white py-10">
         <div className="container mx-auto px-6 md:px-0">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 mb-8 md:mb-0">
+            <div className="md:w-1/3 mb-8 md:mb-0 p-2">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Innovative Valve Solutions for Every Industry</h1>
               <p className="text-xl mb-6">
                 Delivering quality, reliability, and performance in every valve we manufacture.
@@ -26,18 +25,10 @@ export default function Home() {
                 Explore Our Products
               </LinkButton>
             </div>
-            {/* <div className="md:w-1/2">
-              <Image
-                src="/placeholder.svg"
-                alt="Valve Manufacturing"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
-            </div> */}
-
-            <Carousel />
-            {/* <EmblaCarousel slides={SLIDES} options={{loop: true}} /> */}
+            
+            <div className="md:w-2/3 mt-8 md:mt-0">
+              <ImageCarousel page="landing" />
+            </div>
 
           </div>
         </div>

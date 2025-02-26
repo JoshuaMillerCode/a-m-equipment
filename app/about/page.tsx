@@ -1,20 +1,14 @@
 import Image from "next/image"
+import ImageCarousel from "../components/ImageCarousel"
 
 export default function About() {
   return (
     <div className="container mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold mb-8">About ValveTech Industries</h1>
+      <h1 className="text-4xl font-bold mb-8">About A&M Equipment</h1>
       <div className="flex flex-col md:flex-row items-center mb-12">
-        <div className="md:w-1/2 mb-8 md:mb-0">
-          <Image
-            src="/placeholder.svg"
-            alt="ValveTech Facility"
-            width={600}
-            height={400}
-            className="rounded-lg shadow-lg"
-          />
-        </div>
+        <ImageCarousel page="about" />
         <div className="md:w-1/2 md:pl-8">
+          {/* Add ben and other guy pics here */}
           <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
           <p className="text-gray-600 mb-4">
             Founded in 1985, ValveTech Industries has been at the forefront of valve manufacturing for over three
@@ -37,7 +31,7 @@ export default function About() {
         </p>
       </div>
       <div>
-        <h2 className="text-2xl font-semibold mb-4">Why Choose ValveTech?</h2>
+        <h2 className="text-2xl font-semibold mb-4">Why Choose A&M Equipment?</h2>
         <ul className="list-disc list-inside text-gray-600">
           <li>Over 35 years of industry experience</li>
           <li>Comprehensive range of valve solutions for various industries</li>

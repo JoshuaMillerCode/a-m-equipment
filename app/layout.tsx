@@ -5,6 +5,7 @@ import Footer from "./components/Footer"
 import Banner from "./components/Banner"
 import type React from "react" // Added import for React
 
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
