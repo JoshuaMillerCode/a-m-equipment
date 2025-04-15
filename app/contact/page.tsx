@@ -14,7 +14,7 @@ export default function Contact() {
           <div className="space-y-4">
             <div className="flex items-center">
               <Phone className="w-6 h-6 text-red-950 mr-2" />
-              <span>(555) 123-4567</span>
+              <span>713-893-9371</span>
             </div>
             <div className="flex items-center">
               <Mail className="w-6 h-6 text-red-950 mr-2" />
@@ -22,7 +22,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center">
               <MapPin className="w-6 h-6 text-red-950 mr-2" />
-              <span>123 Valve Street, Industrial City, IN 12345, USA</span>
+              <span>28246 FM 2920 Rd. Waller, TX 77484 USA</span>
             </div>
           </div>
         </div>
