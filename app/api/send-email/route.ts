@@ -7,9 +7,14 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
+    const recipient =
+      body.recipient === 'a&m'
+        ? 'vmpsales@amequipment.com'
+        : 'sales@newtonvas.com';
+
     const data = await resend.emails.send({
       from: 'yourdomain@resend.dev', // TODO: change to actual domain
-      // to: 'vmpsales@amequipment.com',
+      // to: recipient,
       to: 'millerjoshua737@gmail.com', // for testing
       replyTo: body.email,
       subject: body.subject,

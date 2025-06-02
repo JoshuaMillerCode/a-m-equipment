@@ -15,14 +15,14 @@ export default function EmailForm() {
     name: "",
     email: "",
     phone: "",
-    recipient: "",
+    recipient: "a&m",
     subject: "",
     message: "",
   });
 
   const recipientOptions = [
     { value: "a&m", label: "A&M Equipment" },
-    { value: "newton", label: "Newton" },
+    { value: "newton", label: "Newton VAS" },
   ];
 
   const selectedRecipient = recipientOptions.find(
@@ -57,7 +57,7 @@ export default function EmailForm() {
         name: "",
         email: "",
         phone: "",
-        recipient: "",
+        recipient: "a&m",
         subject: "",
         message: "",
       });
@@ -76,7 +76,7 @@ export default function EmailForm() {
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="recipient" className="block text-sm font-medium text-gray-700">
-                Recipient (Who should we send the email to?)
+                Recipient (Who should we send the email to?) <span className="text-red-500">*</span>
               </label>
               <div className="relative mb-4">
                 <DropdownMenu>
@@ -86,7 +86,7 @@ export default function EmailForm() {
                       className="mt-1 block w-full rounded-md border border-gray-300 bg-white shadow-sm pl-3 pr-10 py-2 text-left focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
                       ref={triggerRef}
                     >
-                      {selectedRecipient ? selectedRecipient.label : "Select recipient..."}
+                      {selectedRecipient ? selectedRecipient.label : recipientOptions[0].label}
                     </button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent style={{ width: menuWidth }}>
@@ -99,6 +99,7 @@ export default function EmailForm() {
                             ? "bg-blue-100 text-blue-700"
                             : ""
                         }
+                        defaultValue={"a&m"}
                       >
                         {option.label}
                       </DropdownMenuItem>
@@ -107,7 +108,7 @@ export default function EmailForm() {
                 </DropdownMenu>
               </div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                Name
+                Name <span className="text-red-500">*</span>
               </label> 
               <input
                 type="text"
@@ -121,7 +122,7 @@ export default function EmailForm() {
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
+                Email <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -135,7 +136,7 @@ export default function EmailForm() {
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                Phone
+                Phone <span className="text-red-500">*</span>
               </label>
               <input
                 type="tel"
@@ -148,7 +149,7 @@ export default function EmailForm() {
             </div>
             <div>
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
-                Subject
+                Subject <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -161,7 +162,7 @@ export default function EmailForm() {
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                Message
+                Message <span className="text-red-500">*</span>
               </label>
               <textarea
                 id="message"
