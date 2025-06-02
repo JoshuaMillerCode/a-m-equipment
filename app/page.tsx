@@ -1,7 +1,6 @@
 import Image from "next/image"
 import LinkButton from "./components/LinkButton"
 import ImageCarousel from "./components/ImageCarousel"
-import Link from "next/link"
 
 export default function Home() {
   const SLIDE_COUNT = 4
@@ -9,7 +8,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-red-950 text-white py-10">
+      <section className="bg-red-950 industrial-bg text-white py-10">
         <div className="container mx-auto px-6 md:px-0">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/3 mb-8 md:mb-0 p-2">

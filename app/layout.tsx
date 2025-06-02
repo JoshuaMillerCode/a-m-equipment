@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Banner from "./components/Banner"
 import type React from "react" // Added import for React
+import { Toaster } from "@/components/ui/toaster"
 
 
 const inter = Inter({ subsets: ["latin"] })
@@ -25,6 +26,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={inter.className}>
+        <Toaster />
         <Banner />
         <Header />
         <main>{children}</main>
