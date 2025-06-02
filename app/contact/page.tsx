@@ -1,5 +1,7 @@
 import { Mail, Phone, MapPin } from "lucide-react"
 import EmailForm from "../components/EmailForm"
+
+
 export default function Contact() {
   return (
     <div className="container mx-auto px-6 py-12">

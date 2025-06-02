@@ -7,14 +7,16 @@ import {
   DropdownMenuContent,
   DropdownMenuItem
 } from "@/components/ui/dropdown-menu";
+import { useToast } from "@/hooks/use-toast";
 
 export default function EmailForm() {
-
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     recipient: "",
+    subject: "",
     message: "",
   });
 
@@ -37,9 +39,36 @@ export default function EmailForm() {
     }
   }, [triggerRef.current]);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: Send email
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) {
+        throw new Error("Failed to send email");
+      }
+      toast({
+        title: "Success",
+        description: "Email sent successfully!",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        recipient: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Error",
+        description: "Failed to send email. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -115,6 +144,19 @@ export default function EmailForm() {
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              />
+            </div>
+            <div>
+              <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
+                Subject
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                value={formData.subject}
+                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
               />
             </div>
             <div>
