@@ -1,7 +1,7 @@
 "use client"
 
 import { useParams, useRouter } from "next/navigation"
-import { products } from "../../data/products"
+import { products1 } from "../../data/products"
 import ProductDetails from "../components/ProductDetails"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
@@ -9,7 +9,7 @@ import { ArrowLeft } from "lucide-react"
 export default function ProductShowPage() {
   const params = useParams()
   const router = useRouter()
-  const product = products.find((p) => p.id === params.id)
+  const product = products1.find((p) => p.id.toString() === params.id)
 
   if (!product) {
     return <div>Product not found</div>

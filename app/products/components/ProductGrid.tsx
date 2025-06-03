@@ -1,9 +1,11 @@
-import type { Product } from "../../data/products"
+import type { Product, Product1 } from "../../data/products"
 import ProductCard from "./ProductCard"
 
 type ProductGridProps = {
-  products: Product[]
+  products: Product1[]
 }
+
+
 
 export default function ProductGrid({ products }: ProductGridProps) {
   if (!products || products.length === 0) {

@@ -1,10 +1,10 @@
-import type { Product } from "../../data/products"
+import type { Product, Product1 } from "../../data/products"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 type ProductCardProps = {
-  product: Product
+  product: Product1
 }
 
 export default function ProductCard({ product }: ProductCardProps) {

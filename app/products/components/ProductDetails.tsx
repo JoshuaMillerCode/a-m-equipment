@@ -1,4 +1,4 @@
-import type { Product, DownloadableFile } from "../../data/products"
+import type { Product, Product1, DownloadableFile } from "../../data/products"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Check, Info, Download } from "lucide-react"
@@ -6,7 +6,7 @@ import Image from "next/image"
 import { downloadMultipleFiles } from "../../utils/downloadMultipleFiles"
 
 type ProductDetailsProps = {
-  product: Product
+  product: Product1
 }
 
 function FileDownloadButton({ file }: { file: DownloadableFile }) {
@@ -22,7 +22,7 @@ function FileDownloadButton({ file }: { file: DownloadableFile }) {
 }
 
 export default function ProductDetails({ product }: ProductDetailsProps) {
-  const Icon = product.icon
+  // const Icon = product.icon
 
   const handleDownloadAll = () => {
     downloadMultipleFiles(product.downloadableFiles)

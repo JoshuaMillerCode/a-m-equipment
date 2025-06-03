@@ -1,11 +1,12 @@
 "use client"
 
 import { useState, useMemo } from "react"
-import { categories, products } from "../data/products"
+import { categories, products, products1 } from "../data/products"
 import CategoryFilter from "./components/CategoryFilter"
 import SearchBar from "./components/SearchBar"
 import ProductGrid from "./components/ProductGrid"
 import Pagination from "./components/Pagination"
+import { Product, Product1 } from "../data/products"
 
 const ITEMS_PER_PAGE = 30
 
@@ -15,7 +16,7 @@ export default function Products() {
   const [currentPage, setCurrentPage] = useState(1)
 
   const filteredProducts = useMemo(() => {
-    return products.filter((product) => {
+    return products1.filter((product) => {
       const categoryMatch = selectedCategory === "All" || product.category === selectedCategory
       const searchMatch =
         product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
