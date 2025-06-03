@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { Home, Info, Package, Phone, Menu } from "lucide-react"
+import { Home, Info, Package, Phone, Menu, Wrench } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
 
@@ -55,6 +55,7 @@ export default function Header() {
             <div className="hidden md:flex space-x-4">
               <NavLink href="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" />
               <NavLink href="/products" icon={<Package className="w-5 h-5 mr-1" />} text="Products" />
+              <NavLink href="/field-service" icon={<Wrench className="w-5 h-5 mr-1" />} text="Field Service" />
               <NavLink href="/about" icon={<Info className="w-5 h-5 mr-1" />} text="About" />
               <NavLink href="/contact" icon={<Phone className="w-5 h-5 mr-1" />} text="Contact" />
             </div>
@@ -66,6 +67,7 @@ export default function Header() {
           <div className="md:hidden mt-4 space-y-2">
             <NavLink href="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" mobile />
             <NavLink href="/products" icon={<Package className="w-5 h-5 mr-1" />} text="Products" mobile />
+            <NavLink href="/field-service" icon={<Wrench className="w-5 h-5 mr-1" />} text="Field Service" mobile />
             <NavLink href="/about" icon={<Info className="w-5 h-5 mr-1" />} text="About" mobile />
             <NavLink href="/contact" icon={<Phone className="w-5 h-5 mr-1" />} text="Contact" mobile />
           </div>
