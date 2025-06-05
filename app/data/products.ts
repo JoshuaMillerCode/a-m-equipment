@@ -42,6 +42,16 @@ export const categories = [
   'Diaphragm Valves',
 ];
 
+/*
+cats - different pages
+Low pressure pneumatic
+high pressure gas 
+hydraulic
+valve maintenance products
+electrics
+
+*/
+
 const iconMap = {
   Droplet,
   Gauge,

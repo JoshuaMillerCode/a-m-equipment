@@ -15,11 +15,10 @@ export default function FieldServicePage() {
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Reliable Valve Field Service — Wherever You Need It
+              Expert Valve Maintenance & Actuator Services
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-              Our expert technicians bring over 30 years of experience to your site to repair, maintain, and upgrade
-              automated valve systems—fast.
+              Our certified technicians specialize in comprehensive valve maintenance, actuator commissioning, and repair services. From routine maintenance to emergency repairs, we ensure your automation systems operate at peak performance.
             </p>
             <Button
               size="lg"
@@ -49,7 +48,7 @@ export default function FieldServicePage() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Settings className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">On-Site Valve Diagnostics</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">On-Site Diagnostics</h3>
                 <p className="text-gray-600">
                   Comprehensive system analysis and troubleshooting to identify issues quickly and accurately.
                 </p>
@@ -123,7 +122,7 @@ export default function FieldServicePage() {
                 <Clock className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Fast Response</h3>
-              <p className="text-gray-600">Emergency response within 4 hours, with most repairs completed same-day.</p>
+              <p className="text-gray-600">Emergency response within 24 hours, with most repairs completed same-day.</p>
             </div>
 
             <div className="text-center">
@@ -156,7 +155,7 @@ export default function FieldServicePage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Service Coverage Area</h2>
               <p className="text-xl text-gray-600">
-                Serving industrial facilities across the Gulf Coast region and beyond.
+                Based in Houston, TX, our team serves industrial facilities across the Gulf Coast and can mobilize anywhere in the continental United States for your valve maintenance and actuator service needs.
               </p>
             </div>
 
@@ -179,7 +178,7 @@ export default function FieldServicePage() {
                     </div>
                     <div className="flex items-center space-x-2">
                       <MapPin className="w-5 h-5 text-blue-600" />
-                      <span className="text-gray-700">Alabama</span>
+                      <span className="text-gray-700">New Mexico</span>
                     </div>
                   </div>
                   <div className="mt-8 p-4 bg-red-50 rounded-lg border border-red-200">

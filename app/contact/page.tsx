@@ -20,7 +20,12 @@ export default function Contact() {
             </div>
             <div className="flex items-center">
               <Mail className="w-6 h-6 text-red-950 mr-2" />
-              <span>vmpsales@amequipment.com</span>
+              <span className="font-bold underline">Value Maintenace Products: </span> <span>vmpsales@amequipment.com</span>
+              
+            </div>
+            <div className="flex items-center">
+              <Mail className="w-6 h-6 text-red-950 mr-2" />
+              <span className="font-bold underline">Automation Request: </span> <span>techsales@amequipment.com</span>
             </div>
             <div className="flex items-center">
               <MapPin className="w-6 h-6 text-red-950 mr-2" />
