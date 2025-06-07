@@ -4,31 +4,75 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Wrench, Clock, Shield, Zap, MapPin, Phone, CheckCircle, Settings, AlertTriangle, Calendar } from "lucide-react"
 import Image from "next/image"
-
+import Link from "next/link"
 export default function FieldServicePage() {
   return (
     <div className="min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 to-gray-700 text-white py-20 lg:py-32">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Expert Valve Maintenance & Actuator Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-              Our certified technicians specialize in comprehensive valve maintenance, actuator commissioning, and repair services. From routine maintenance to emergency repairs, we ensure your automation systems operate at peak performance.
-            </p>
-            <Button
-              size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-md"
-            >
-              Request Field Service
-            </Button>
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        {/* Four Quadrant Background Images */}
+        <div className="absolute inset-0 grid grid-cols-2 grid-rows-2">
+          {/* Top Left */}
+          <div className="relative">
+            <Image
+              src="/field_service/IMG_8544.jpeg"
+              alt="Field service technician at work"
+              fill
+              className="object-cover"
+            />
+          </div>
+          {/* Top Right */}
+          <div className="relative">
+            <Image
+              src="/field_service/IMG_5196.jpeg"
+              alt="Valve repair equipment"
+              fill
+              className="object-cover"
+            />
+          </div>
+          {/* Bottom Left */}
+          <div className="relative">
+            <Image
+              src="/field_service/IMG_4951.jpeg"
+              alt="Industrial valve systems"
+              fill
+              className="object-cover"
+            />
+          </div>
+          {/* Bottom Right */}
+          <div className="relative">
+            <Image
+              src="/field_service/IMG_4854.jpeg"
+              alt="On-site diagnostics"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=600&width=1200')] bg-cover bg-center opacity-20"></div>
+
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+
+        <div className="relative container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Reliable Valve Field Service — Wherever You Need It
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+              Our expert technicians bring over 30 years of experience to your site to repair, maintain, and upgrade
+              automated valve systems—fast.
+            </p>
+            <Link href="#request-service-form">
+              <Button
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-md"
+              >
+                Request Field Service
+              </Button>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* Services Overview Section */}
@@ -193,13 +237,12 @@ export default function FieldServicePage() {
                 </div>
               </div>
 
-              <div className="bg-gray-200 rounded-lg h-80 flex items-center justify-center">
+              <div className="relative w-full h-full">
                 <Image
-                  src="/placeholder.svg?height=320&width=400"
+                  src="/MapChart_Map.png"
                   alt="Service area map"
-                  width={400}
-                  height={320}
-                  className="rounded-lg opacity-60"
+                  fill
+                  className="object-cover rounded-lg"
                 />
               </div>
             </div>
@@ -208,7 +251,7 @@ export default function FieldServicePage() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-16 lg:py-24 bg-blue-600 text-white">
+      <section className="py-16 lg:py-24 bg-blue-600 text-white" id="request-service-form">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Get Your System Back Online</h2>

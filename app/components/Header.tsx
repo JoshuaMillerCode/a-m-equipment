@@ -20,10 +20,6 @@ export default function Header() {
       <nav className="container mx-auto px-8 md:px-0 py-3">
         <div className="flex justify-between items-center">
           <div className="flex items-center justify-start lg:justify-between w-1/2 md:w-1/2">
-            {/* maybe keep? */}
-            {/* <Link href="/" className="text-xl  font-bold text-gray-800">
-              A&M Equipment 
-            </Link> */}
             <Link href="/" >
               <Image src="/maroon-logo.png" width={125} height={125} alt="A&M Logo" />
             </Link>
@@ -72,7 +68,7 @@ export default function Header() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/products/valve-maintenance" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <Link href="/products" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                           Valve Maintenance Products
                         </Link>
                       </li>
@@ -86,22 +82,22 @@ export default function Header() {
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4">
                       <li>
-                        <Link href="/field-service" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <Link href="/services/field-service" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                           Field Service
                         </Link>
                       </li>
                       <li>
-                        <Link href="/engineering" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <Link href="/services/engineering" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                           Engineering
                         </Link>
                       </li>
                       <li>
-                        <Link href="/automation-control" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <Link href="/services/automation-control" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                           Automation Control / Retro Fit
                         </Link>
                       </li>
                       <li>
-                        <Link href="/valve-adaption" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <Link href="/services/valve-adaption" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                           Valve Adaption
                         </Link>
                       </li>
