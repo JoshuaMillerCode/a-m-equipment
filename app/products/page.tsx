@@ -30,12 +30,12 @@ export default function Products() {
 
   return (
     <div className="container mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold mb-8">Our Products</h1>
+      <h1 className="text-4xl font-bold mb-8">Valve Maintenance Products</h1>
       <p className="text-xl text-gray-600 mb-12">
         Discover our comprehensive range of high-quality valves designed to meet the diverse needs of various
         industries.
       </p>
-      <div className="flex h-screen bg-gray-100 overflow-hidden">
+      <div className="flex flex-col lg:flex-row bg-gray-100 rounded-lg overflow-hidden">
         <CategoryFilter
           categories={categories}
           selectedCategory={selectedCategory}
