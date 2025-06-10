@@ -43,7 +43,7 @@ export default function EngineeringServicePage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">What is Valve Adaptation?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">What is Valve Adaptation?</h2> 
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Valve adaptation is the process of modifying existing valve systems to meet new operational requirements,
               improve performance, or integrate with updated control systems. Rather than replacing entire valve

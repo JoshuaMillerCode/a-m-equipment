@@ -66,7 +66,7 @@ export default function FieldServicePage() {
             <Link href="#request-service-form">
               <Button
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-md"
+                className="bg-red-950 hover:bg-red-900 text-white px-8 py-4 text-lg font-semibold rounded-md"
               >
                 Request Field Service
               </Button>
@@ -89,8 +89,8 @@ export default function FieldServicePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Settings className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Settings className="w-8 h-8 text-red-950" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">On-Site Diagnostics</h3>
                 <p className="text-gray-600">
@@ -102,7 +102,7 @@ export default function FieldServicePage() {
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <AlertTriangle className="w-8 h-8 text-red-600" />
+                  <AlertTriangle className="w-8 h-8 text-red-950" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Emergency Repair & Replacement</h3>
                 <p className="text-gray-600">
@@ -113,8 +113,8 @@ export default function FieldServicePage() {
 
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="w-8 h-8 text-green-600" />
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="w-8 h-8 text-red-950" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Scheduled Maintenance Programs</h3>
                 <p className="text-gray-600">
@@ -125,8 +125,8 @@ export default function FieldServicePage() {
 
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-purple-600" />
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-red-950" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Field Automation & Calibration</h3>
                 <p className="text-gray-600">
@@ -152,7 +152,7 @@ export default function FieldServicePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-red-950 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Safety First</h3>
@@ -162,7 +162,7 @@ export default function FieldServicePage() {
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-red-950 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Fast Response</h3>
@@ -170,7 +170,7 @@ export default function FieldServicePage() {
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-red-950 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Wrench className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Expert Technicians</h3>
@@ -180,7 +180,7 @@ export default function FieldServicePage() {
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-red-950 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Minimal Downtime</h3>
@@ -209,19 +209,19 @@ export default function FieldServicePage() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-6">Primary Service Areas</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex items-center space-x-2">
-                      <MapPin className="w-5 h-5 text-blue-600" />
+                      <MapPin className="w-5 h-5 text-red-950" />
                       <span className="text-gray-700">Texas</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <MapPin className="w-5 h-5 text-blue-600" />
+                      <MapPin className="w-5 h-5 text-red-950" />
                       <span className="text-gray-700">Louisiana</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <MapPin className="w-5 h-5 text-blue-600" />
+                      <MapPin className="w-5 h-5 text-red-950" />
                       <span className="text-gray-700">Mississippi</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <MapPin className="w-5 h-5 text-blue-600" />
+                      <MapPin className="w-5 h-5 text-red-950" />
                       <span className="text-gray-700">New Mexico</span>
                     </div>
                   </div>
@@ -251,11 +251,11 @@ export default function FieldServicePage() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-16 lg:py-24 bg-blue-600 text-white" id="request-service-form">
+      <section className="py-16 lg:py-24 bg-red-950 text-white" id="request-service-form">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Get Your System Back Online</h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-gray-200">
               Contact our field service team today for fast, reliable valve automation solutions.
             </p>
 
@@ -271,7 +271,7 @@ export default function FieldServicePage() {
                   <Input placeholder="Email" type="email" className="bg-gray-50" />
                   <Input placeholder="Phone" type="tel" className="bg-gray-50" />
                   <Textarea placeholder="Describe your service needs..." className="bg-gray-50 h-24" />
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">Submit Request</Button>
+                  <Button className="w-full bg-red-950 hover:bg-red-900">Submit Request</Button>
                 </form>
               </div>
 
@@ -280,25 +280,25 @@ export default function FieldServicePage() {
                   <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
-                      <Phone className="w-6 h-6 text-blue-200" />
+                      <Phone className="w-6 h-6 text-gray-300" />
                       <div>
                         <p className="font-semibold">Emergency Hotline</p>
-                        <p className="text-blue-100">(555) 123-4567</p>
+                        <p className="text-gray-200">(555) 123-4567</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Phone className="w-6 h-6 text-blue-200" />
+                      <Phone className="w-6 h-6 text-gray-300" />
                       <div>
                         <p className="font-semibold">Main Office</p>
-                        <p className="text-blue-100">(555) 987-6543</p>
+                        <p className="text-gray-200">(555) 987-6543</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-blue-700 p-6 rounded-lg">
+                <div className="bg-red-900 p-6 rounded-lg">
                   <h4 className="font-semibold mb-2">Emergency Service Available</h4>
-                  <p className="text-blue-100 text-sm">
+                  <p className="text-gray-200 text-sm">
                     Critical system failure? Our emergency response team is standing by 24/7 to get your operations back
                     online quickly.
                   </p>

@@ -35,7 +35,7 @@ export default function Products() {
         Discover our comprehensive range of high-quality valves designed to meet the diverse needs of various
         industries.
       </p>
-      <div className="flex h-screen bg-gray-100 overflow-hidden">
+      <div className="flex flex-col lg:flex-row bg-gray-100 rounded-lg overflow-hidden">
         <CategoryFilter
           categories={categories}
           selectedCategory={selectedCategory}
