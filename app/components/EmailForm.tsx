@@ -21,7 +21,8 @@ export default function EmailForm() {
   });
 
   const recipientOptions = [
-    { value: "a&m", label: "A&M Equipment" },
+    { value: "a&mAR", label: "Automation Request (A&M Equipment)" },
+    { value: "a&mVM", label: "Value Maintenance Products (A&M Equipment)" },
     { value: "newton", label: "Newton VAS" },
   ];
 

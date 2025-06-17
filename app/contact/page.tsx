@@ -14,22 +14,33 @@ export default function Contact() {
             the contact information below or fill out the form, and we'll get back to you as soon as possible.
           </p>
           <div className="space-y-4">
-            <div className="flex items-center">
-              <Phone className="w-6 h-6 text-red-950 mr-2" />
-              <span>713-893-9371</span>
+            <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+              <Phone className="w-6 h-6 text-red-950" />
+              <div>
+                <span className="font-bold text-red-950">Phone</span>
+                <p className="text-gray-600">713-893-9371</p>
+              </div>
             </div>
-            <div className="flex items-center">
-              <Mail className="w-6 h-6 text-red-950 mr-2" />
-              <span className="font-bold underline">Value Maintenace Products: </span> <span>vmpsales@amequipment.com</span>
-              
+            <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg mb-4">
+              <Mail className="w-6 h-6 text-red-950" />
+              <div>
+                <span className="font-bold text-red-950">Value Maintenance Products</span>
+                <p className="text-gray-600">vmpsales@amequipment.com</p>
+              </div>
             </div>
-            <div className="flex items-center">
-              <Mail className="w-6 h-6 text-red-950 mr-2" />
-              <span className="font-bold underline">Automation Request: </span> <span>techsales@amequipment.com</span>
+            <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+              <Mail className="w-6 h-6 text-red-950" />
+              <div>
+                <span className="font-bold text-red-950">Automation Request</span>
+                <p className="text-gray-600">techsales@amequipment.com</p>
+              </div>
             </div>
-            <div className="flex items-center">
-              <MapPin className="w-6 h-6 text-red-950 mr-2" />
-              <span>28246 FM 2920 Rd. Waller, TX 77484 USA</span>
+            <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+              <MapPin className="w-6 h-6 text-red-950" />
+              <div>
+                <span className="font-bold text-red-950">Address</span>
+                <p className="text-gray-600">28246 FM 2920 Rd. Waller, TX 77484 USA</p>
+              </div>
             </div>
           </div>
         </div>

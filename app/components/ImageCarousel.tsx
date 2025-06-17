@@ -87,8 +87,7 @@ export default function ImageCarousel({ page }: { page: keyof Pictures }) {
                 alt={image.alt}
                 width={600}
                 height={400}
-                className={`${imageDimensions[index] && isLandscape(imageDimensions[index].width, imageDimensions[index].height) ? 'w-full h-full object-cover' : ''}`}
-                // className="object-contain"
+                className={`w-full h-full ${page === "about" ? "object-contain" : "object-cover"}`}
               />
             </div>
           ))}

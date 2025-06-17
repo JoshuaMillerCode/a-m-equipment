@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Wrench, Clock, Shield, Zap, MapPin, Phone, CheckCircle, Settings, AlertTriangle, Calendar } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import RequestForm from "../../components/RequestForm"
+
 export default function FieldServicePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -262,35 +262,25 @@ export default function FieldServicePage() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="bg-white text-gray-900 p-8 rounded-lg">
                 <h3 className="text-2xl font-semibold mb-6">Request Service</h3>
-                <form className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <Input placeholder="First Name" className="bg-gray-50" />
-                    <Input placeholder="Last Name" className="bg-gray-50" />
-                  </div>
-                  <Input placeholder="Company" className="bg-gray-50" />
-                  <Input placeholder="Email" type="email" className="bg-gray-50" />
-                  <Input placeholder="Phone" type="tel" className="bg-gray-50" />
-                  <Textarea placeholder="Describe your service needs..." className="bg-gray-50 h-24" />
-                  <Button className="w-full bg-red-950 hover:bg-red-900">Submit Request</Button>
-                </form>
+                <RequestForm />
               </div>
 
               <div className="space-y-8">
                 <div>
                   <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
                   <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
+                    {/* <div className="flex items-center space-x-3">
                       <Phone className="w-6 h-6 text-gray-300" />
                       <div>
                         <p className="font-semibold">Emergency Hotline</p>
                         <p className="text-gray-200">(555) 123-4567</p>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="flex items-center space-x-3">
                       <Phone className="w-6 h-6 text-gray-300" />
                       <div>
                         <p className="font-semibold">Main Office</p>
-                        <p className="text-gray-200">(555) 987-6543</p>
+                        <p className="text-gray-200">(713)-893-9371</p>
                       </div>
                     </div>
                   </div>

@@ -63,12 +63,12 @@ export default function Header() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/products/electric-hydraulic" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                          Electric Hydraulic
+                        <Link href="https://newtonvas.com/" target="_blank" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          Electro-Hydraulic
                         </Link>
                       </li>
                       <li>
-                        <Link href="/products" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <Link href="https://www.valtex.com/products/all" target="_blank" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                           Valve Maintenance Products
                         </Link>
                       </li>
@@ -132,25 +132,25 @@ export default function Header() {
         </div>
         {isMenuOpen && (
           <div className="md:hidden mt-4 space-y-2">
-            <NavLink href="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" mobile />
+            <NavLink setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} href="/" icon={<Home className="w-5 h-5 mr-1" />} text="Home" mobile />
             <div className="space-y-2 pl-4">
               <div className="font-medium text-gray-600">Products</div>
-              <NavLink href="/products/low-pressure-pneumatic" icon={<Package className="w-5 h-5 mr-1" />} text="Low Pressure Pneumatic" mobile />
-              <NavLink href="/products/high-pressure-gas" icon={<Package className="w-5 h-5 mr-1" />} text="High Pressure Gas" mobile />
-              <NavLink href="/products/electric-hydraulic" icon={<Package className="w-5 h-5 mr-1" />} text="Electric Hydraulic" mobile />
-              <NavLink href="/products/valve-maintenance" icon={<Package className="w-5 h-5 mr-1" />} text="Valve Maintenance Products" mobile />
+              <NavLink setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} href="/products/low-pressure-pneumatic" icon={<Package className="w-5 h-5 mr-1" />} text="Low Pressure Pneumatic" mobile />
+              <NavLink setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} href="/products/high-pressure-gas" icon={<Package className="w-5 h-5 mr-1" />} text="High Pressure Gas" mobile />
+              <NavLink setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} href="https://newtonvas.com/" target="_blank" icon={<Package className="w-5 h-5 mr-1" />} text="Electro-Hydraulic" mobile />
+              <NavLink setIsMenuOpen={setIsMenuOpen} target="_blank" isMenuOpen={isMenuOpen} href="https://www.valtex.com/products/all" icon={<Package className="w-5 h-5 mr-1" />} text="Valve Maintenance Products" mobile />
             </div>
             <div className="space-y-2 pl-4">
               <div className="font-medium text-gray-600">Service</div>
-              <NavLink href="/field-service" icon={<Wrench className="w-5 h-5 mr-1" />} text="Field Service" mobile />
-              <NavLink href="/engineering" icon={<Wrench className="w-5 h-5 mr-1" />} text="Engineering" mobile />
-              <NavLink href="/automation-control" icon={<Wrench className="w-5 h-5 mr-1" />} text="Automation Control / Retro Fit" mobile />
-              <NavLink href="/valve-adaption" icon={<Wrench className="w-5 h-5 mr-1" />} text="Valve Adaption" mobile />
+              <NavLink setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} href="/services/field-service" icon={<Wrench className="w-5 h-5 mr-1" />} text="Field Service" mobile />
+              <NavLink setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} href="/services/engineering" icon={<Wrench className="w-5 h-5 mr-1" />} text="Engineering" mobile />
+              <NavLink setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} href="/services/automation-control" icon={<Wrench className="w-5 h-5 mr-1" />} text="Automation Control / Retro Fit" mobile />
+              <NavLink setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} href="/services/valve-adaption" icon={<Wrench className="w-5 h-5 mr-1" />} text="Valve Adaption" mobile />
             </div>
             <div className="space-y-2 pl-4">
               <div className="font-medium text-gray-600">Company</div>
-              <NavLink href="/about" icon={<Info className="w-5 h-5 mr-1" />} text="About Us" mobile />
-              <NavLink href="/contact" icon={<Phone className="w-5 h-5 mr-1" />} text="Contact Us" mobile />
+              <NavLink setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} href="/about" icon={<Info className="w-5 h-5 mr-1" />} text="About Us" mobile />
+              <NavLink setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} href="/contact" icon={<Phone className="w-5 h-5 mr-1" />} text="Contact Us" mobile />
             </div>
           </div>
         )}
@@ -159,13 +159,16 @@ export default function Header() {
   )
 }
 function NavLink({
+  target,
   href,
   icon,
   text,
   mobile = false,
-}: { href: string; icon: React.ReactNode; text: string; mobile?: boolean }) {
+  setIsMenuOpen,
+  isMenuOpen,
+}: { href: string; icon: React.ReactNode; text: string; mobile?: boolean, target?: string, setIsMenuOpen: (isMenuOpen: boolean) => void, isMenuOpen: boolean }) {
   return (
-    <Link href={href} className={`flex items-center text-gray-600 hover:text-red-950 ${mobile ? "py-2" : ""}`}>
+    <Link href={href} onClick={() => setIsMenuOpen(!isMenuOpen)} className={`flex items-center text-gray-600 hover:text-red-950 ${mobile ? "py-2" : ""}`} target={target}>
       {icon}
       <span>{text}</span>
     </Link>

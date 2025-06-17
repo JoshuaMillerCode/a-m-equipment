@@ -11,19 +11,20 @@ import { Product, Product1 } from "../data/products"
 const ITEMS_PER_PAGE = 30
 
 export default function Products() {
-  const [selectedCategory, setSelectedCategory] = useState("All")
+  // const [selectedCategory, setSelectedCategory] = useState("All")
   const [searchQuery, setSearchQuery] = useState("")
   const [currentPage, setCurrentPage] = useState(1)
 
   const filteredProducts = useMemo(() => {
     return products1.filter((product) => {
-      const categoryMatch = selectedCategory === "All" || product.category === selectedCategory
+      // const categoryMatch = selectedCategory === "All" || product.category === selectedCategory
       const searchMatch =
         product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.description.toLowerCase().includes(searchQuery.toLowerCase())
-      return categoryMatch && searchMatch
+      // return categoryMatch && searchMatch
+      return searchMatch
     })
-  }, [selectedCategory, searchQuery])
+  }, [/* selectedCategory, */ searchQuery])
 
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE)
   const paginatedProducts = filteredProducts.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
@@ -36,14 +37,14 @@ export default function Products() {
         industries.
       </p>
       <div className="flex flex-col lg:flex-row bg-gray-100 rounded-lg overflow-hidden">
-        <CategoryFilter
+        {/* <CategoryFilter
           categories={categories}
           selectedCategory={selectedCategory}
           onSelectCategory={(category) => {
             setSelectedCategory(category)
             setCurrentPage(1)
           }}
-        />
+        /> */}
         <main className="flex-1 flex flex-col overflow-hidden">
           <div className="p-4 md:p-6 space-y-4 bg-white shadow-md">
             <SearchBar
