@@ -43,6 +43,19 @@ export default function EngineeringServicePage() {
             </div>
           </div>
           
+          {/* Full Width Image */}
+          <div className="w-full mb-12">
+            <div className="relative w-full h-[500px] rounded-lg overflow-hidden">
+              <Image
+                src="/engineering/computer.jpg"
+                alt="Engineering workspace"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-12">
             {/* Engineering Capabilities */}
             <div className="bg-gray-50 p-8 rounded-lg">
@@ -105,16 +118,6 @@ export default function EngineeringServicePage() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Bottom Image */}
-          <div className="mt-12 relative h-[500px] rounded-lg overflow-hidden">
-            <Image
-              src="/engineering/blueprint.png"
-              alt="Engineering workspace"
-              fill
-              className="object-contain"
-            />
           </div>
         </div>
       </div>
