@@ -8,8 +8,7 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const data = await resend.emails.send({
-      from: 'yourdomain@resend.dev', // TODO: change to actual domain
-      // to: 'fieldservice@amequipment.com',
+      from: 'website@amequipment.com',
       to: 'sales@amequipment.com',
       replyTo: body.email,
       subject: `Field Service Request from ${body.company}`,

@@ -18,9 +18,8 @@ export async function POST(req: Request) {
     }
 
     const data = await resend.emails.send({
-      from: 'yourdomain@resend.dev', // TODO: change to actual domain
+      from: 'website@amequipment.com',
       to: recipient,
-      // to: 'millerjoshua737@gmail.com', // for testing
       replyTo: body.email,
       subject: body.subject,
       html: `
