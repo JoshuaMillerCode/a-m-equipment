@@ -88,7 +88,11 @@ export default function ImageCarousel({ page }: { page: keyof Pictures }) {
                   alt={image.alt}
                   width={600}
                   height={400}
-                  className="w-full h-auto object-contain object-center"
+                  className={
+                    page === "about"
+                      ? "max-w-full max-h-full object-contain object-center"
+                      : "w-full h-full object-cover object-center md:object-contain"
+                  }
                 />
               ) : (
                 <NextImage
