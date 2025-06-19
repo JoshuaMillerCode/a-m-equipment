@@ -139,7 +139,7 @@ export default function LowPressurePneumaticPage() {
                 <span className="font-medium">Phone:</span> (713)-893-9371
               </p>
               <p className="text-gray-700">
-                <span className="font-medium">Email:</span> sales@amequipment.com
+                <span className="font-medium">Email:</span> sales@a-mequipment.com
               </p>
             </div>
           </div>
