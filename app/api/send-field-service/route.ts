@@ -8,8 +8,8 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const data = await resend.emails.send({
-      from: 'website@amequipment.com',
-      to: 'sales@amequipment.com',
+      from: 'website@a-mequipment.com',
+      to: 'sales@a-mequipment.com',
       replyTo: body.email,
       subject: `Field Service Request from ${body.company}`,
       html: `
