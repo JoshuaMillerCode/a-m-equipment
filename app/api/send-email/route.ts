@@ -10,17 +10,16 @@ export async function POST(req: Request) {
     let recipient;
 
     if (body.recipient === 'a&mAR') {
-      recipient = 'techsales@amequipment.com';
+      recipient = 'techsales@a-mequipment.com';
     } else if (body.recipient === 'a&mVM') {
-      recipient = 'vmpsales@amequipment.com';
+      recipient = 'vmpsales@a-mequipment.com';
     } else {
       recipient = 'sales@newtonvas.com';
     }
 
     const data = await resend.emails.send({
-      from: 'yourdomain@resend.dev', // TODO: change to actual domain
+      from: 'website@a-mequipment.com',
       to: recipient,
-      // to: 'millerjoshua737@gmail.com', // for testing
       replyTo: body.email,
       subject: body.subject,
       html: `

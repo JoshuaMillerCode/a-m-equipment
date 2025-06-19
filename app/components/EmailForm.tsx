@@ -15,7 +15,7 @@ export default function EmailForm() {
     name: "",
     email: "",
     phone: "",
-    recipient: "a&m",
+    recipient: "a&mAR",
     subject: "",
     message: "",
   });
@@ -47,7 +47,8 @@ export default function EmailForm() {
         method: "POST",
         body: JSON.stringify(formData),
       });
-      if (!response.ok) {
+      const data = await response.json();
+      if (data.error) {
         throw new Error("Failed to send email");
       }
       toast({
@@ -58,7 +59,7 @@ export default function EmailForm() {
         name: "",
         email: "",
         phone: "",
-        recipient: "a&m",
+        recipient: "a&mAR",
         subject: "",
         message: "",
       });

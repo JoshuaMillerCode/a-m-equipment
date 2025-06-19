@@ -24,7 +24,8 @@ export default function RequestForm() {
         method: "POST",
         body: JSON.stringify(formData),
       });
-      if (!response.ok) {
+      const data = await response.json();
+      if (data.error) {
         throw new Error("Failed to send request");
       }
       toast({
