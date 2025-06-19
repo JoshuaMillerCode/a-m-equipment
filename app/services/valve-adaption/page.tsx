@@ -59,6 +59,15 @@ export default function ValveAdaptionService() {
             priority
           />
         </div>
+        <div className="relative w-full h-[600px]">
+          <Image
+            src="/valve-adaption/valve_topworks_drawing.webp"
+            alt="Valve adaptation showcase"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
       </section>
     </div>
   )

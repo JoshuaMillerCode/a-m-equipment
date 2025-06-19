@@ -168,7 +168,7 @@ export default function AutomationControlServicePage() {
             </div>
             <div className="flex items-center space-x-3">
               <Mail className="w-6 h-6" />
-              <span className="text-xl">sales@amequipment.com</span>
+              <span className="text-xl">sales@a-mequipment.com</span>
             </div>
           </div>
 

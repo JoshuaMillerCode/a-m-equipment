@@ -25,14 +25,14 @@ export default function Contact() {
               <Mail className="w-6 h-6 text-red-950" />
               <div>
                 <span className="font-bold text-red-950">Value Maintenance Products</span>
-                <p className="text-gray-600">vmpsales@amequipment.com</p>
+                <p className="text-gray-600">vmpsales@a-mequipment.com</p>
               </div>
             </div>
             <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
               <Mail className="w-6 h-6 text-red-950" />
               <div>
                 <span className="font-bold text-red-950">Automation Request</span>
-                <p className="text-gray-600">techsales@amequipment.com</p>
+                <p className="text-gray-600">techsales@a-mequipment.com</p>
               </div>
             </div>
             <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
