@@ -90,7 +90,7 @@ export default function ImageCarousel({ page }: { page: keyof Pictures }) {
                   height={400}
                   className={
                     page === "about"
-                      ? "max-w-full max-h-full object-contain object-center"
+                      ? "w-full h-full object-contain object-center"
                       : "w-full h-full object-cover object-center md:object-contain"
                   }
                 />
