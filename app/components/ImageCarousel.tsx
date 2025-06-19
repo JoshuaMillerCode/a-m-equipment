@@ -77,18 +77,32 @@ export default function ImageCarousel({ page }: { page: keyof Pictures }) {
   }
 
   return (
-    <div className={`relative ${page === "about" ? "w-3/4" : "w-full"}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <div className="relative aspect-[2/3] md:aspect-[4/3] w-full overflow-hidden rounded-lg">
-        <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentIndex * 100.003}%)` }}>
+    <div className={`relative w-full`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+      <div className="relative aspect-[2/3] md:aspect-[4/3] w-full overflow-hidden rounded-lg flex items-center justify-center">
+        <div className="flex transition-transform duration-500 w-full h-full" style={{ transform: `translateX(-${currentIndex * 100.003}%)` }}>
           {images.map((image, index) => (
             <div key={index} className="w-full flex-shrink-0 flex justify-center items-center">
-              <NextImage
-                src={image.src || "/placeholder.svg"}
-                alt={image.alt}
-                width={600}
-                height={400}
-                className={`w-full h-full ${page === "about" ? "object-contain" : "object-cover"}`}
-              />
+              {imageDimensions[index] && isLandscape(imageDimensions[index].width, imageDimensions[index].height) ? (
+                <NextImage
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
+                  width={600}
+                  height={400}
+                  className={
+                    page === "about"
+                      ? "w-full h-full object-contain object-center"
+                      : "w-full h-full object-cover object-center md:object-contain"
+                  }
+                />
+              ) : (
+                <NextImage
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
+                  width={600}
+                  height={400}
+                  className="max-w-full max-h-full object-contain object-center"
+                />
+              )}
             </div>
           ))}
         </div>
