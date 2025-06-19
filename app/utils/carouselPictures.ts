@@ -10,12 +10,12 @@ export interface Pictures {
 const pictures: Pictures = {
   landing: [
     {
-      src: '/landing/DJI_0104.JPG',
-      alt: 'Valve Manufacturing Process',
-    },
-    {
       src: '/landing/DJI_0115.JPG',
       alt: 'Quality Control Testing',
+    },
+    {
+      src: '/landing/DJI_0104.JPG',
+      alt: 'Valve Manufacturing Process',
     },
     {
       src: '/landing/DJI_0118.JPG',
@@ -80,6 +80,14 @@ const pictures: Pictures = {
   ],
   about: [
     {
+      src: '/about/IMG_9783.JPG',
+      alt: 'Valve Manufacturing Process',
+    },
+    {
+      src: '/about/IMG_9788.JPG',
+      alt: 'Valve Manufacturing Process',
+    },
+    {
       src: '/about/IMG_0618.JPG',
       alt: 'Valve Manufacturing Process',
     },
@@ -133,14 +141,6 @@ const pictures: Pictures = {
     },
     {
       src: '/about/IMG_9025.JPG',
-      alt: 'Valve Manufacturing Process',
-    },
-    {
-      src: '/about/IMG_9783.JPG',
-      alt: 'Valve Manufacturing Process',
-    },
-    {
-      src: '/about/IMG_9788.JPG',
       alt: 'Valve Manufacturing Process',
     },
   ],
